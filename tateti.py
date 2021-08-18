@@ -36,15 +36,10 @@ def ini_partida(x,y):
 
 ini_partida(jug1,jug2)
 
-
-
-#Hacer tablero simple con las referencias en forma de superíndice (ejemplo ³)
-#tablero tateti _  filasx3
-
 def mostrar_tablero(tablero): # se crea función para crear el tablero e imprimirlo en pantalla
     for fila in tablero:
         for i in range (len (fila)): # recorre cada elemento de la fila
-            if i==len(fila)-1: # representa el último elemento de cada lista,ya que el largo de cada sublista es de 5 elementos(len=4),ya que se cuenta desde subindice 0 a 4.
+            if i==len(fila)-1: # representa el último elemento de cada lista,ya que el largo de cada sublista es de 3 elementos(len=2),ya que se cuenta desde subindice 0 a 2.
                 print(fila[i],end='\n') # se muestra en pantalla sólo el último elemento de cada lista y con '\n' se baja al siguiente renglón, para armar el tablero
             else: # si no es el último elemento, se lo imprime en pantalla y no se baja a siguiente renglón
                 print(fila[i], end=' ') 
