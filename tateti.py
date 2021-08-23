@@ -50,6 +50,7 @@ def jugador_entrada():  #Con esta función, definimos los nombres de los jugador
     aux1=0 #Definimos una variable auxiliar1 y la iniciamos con cero.
     aux2=0 #Definimos una variable auxiliar2 y la iniciamos con cero.
 
+<<<<<<< HEAD
     if aux0==jug1: #siguiendo con el ejemplo, compara que Mirko = Mirko, como se da esta situación el programa sigue en línea 55. Si se hubiese dado la situación inversa (Juan = Mirko) el programa pasa a la línea 57:
         aux1=str(jug1)  #confirma que aux1=Mirko
         aux2=str(jug2)  #confirma que aux2=Juan
@@ -60,6 +61,34 @@ def jugador_entrada():  #Con esta función, definimos los nombres de los jugador
 
     #jugador1 = input("elija un simbolo para jugar 'X' or 'O': ")
     jugador1 = input()  #Soli
+=======
+def ini_partida(x,y):
+    jugadores=[jug1,jug2]
+    asig1=(random.choice(simbolos))
+    if asig1=='X':
+        asig2='O'
+    else:
+        asig2='X'
+    print('La asignación de letras para: ', jug1,' es ',asig1, ' y ', jug2, ' es ', asig2)
+    print('Inicia la partida:',random.choice(jugadores))
+    return ()
+
+ini_partida(jug1,jug2)
+
+def mostrar_tablero(tablero): # se crea función para crear el tablero e imprimirlo en pantalla
+    for fila in tablero:
+        for i in range (len (fila)): # recorre cada elemento de la fila
+            if i==len(fila)-1: # representa el último elemento de cada lista,ya que el largo de cada sublista es de 3 elementos(len=2),ya que se cuenta desde subindice 0 a 2.
+                print(fila[i],end='\n') # se muestra en pantalla sólo el último elemento de cada lista y con '\n' se baja al siguiente renglón, para armar el tablero
+            else: # si no es el último elemento, se lo imprime en pantalla y no se baja a siguiente renglón
+                print(fila[i], end=' ') 
+tablero= [
+    ['| 1','| 2 |','3 |'],
+    ['-------------'],
+    ['| 4','| 5 |','6 |'],
+    ['-------------'],
+    ['| 7','| 8 |','9 |'],
+>>>>>>> 20e85bb9ce54866be0ad18ae87af64410521b3a5
     
     while True:
         if jugador1.upper() == 'X':
